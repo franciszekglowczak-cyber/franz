@@ -1,2 +1,2 @@
 # franz
-my first tkinter program :)
+i like micro controlers and programing
