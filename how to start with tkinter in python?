@@ -1,0 +1,55 @@
+Hi and !hello!
+
+
+  1st thint is makeing someting like virtual paper 
+but before that u need to upload library (import tkinter as tk)
+
+
+  paper:
+u can take any name i always take root idk why lol.
+so u need to type "any name = tk.Tk()"
+
+u did it, cool
+
+  obiect(button, label, entry[input]):
+it is usually the same
+any name = tk.[Button, Label, Entry]((your tk.Tk() name), text="opcional", bg="main color is opcional", fg="text color is also opcional")
+
+important!!!
+  oneed to pack everythink for example button.pack() if u wont do that think wont show up 
+and "the tk.Tk()" name in my program root loock    root.mainloop() it is holding all program to not vanish
+
+i think that it is all.
+
+  code for u to learn:
+
+import tkinter as tk
+
+root = tk.Tk()
+
+btn = tk.Button(root, text="button")
+btn.pack()
+
+root.mainloop()
+
+other with funkcion 
+
+import tkinter as tk
+
+def click():
+    label.pack_forget()
+
+def clickh():
+    label.pack()
+    root.after(350, click)
+
+root = tk.Tk()
+
+label = tk.Label(root, text="click")
+
+btn = tk.Button(root, text="button", command=clickh)
+btn.pack()
+
+root.mainloop()
+
+have nice learning :)
