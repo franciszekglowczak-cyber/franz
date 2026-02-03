@@ -1,0 +1,50 @@
+import tkinter as tk
+import time
+
+root = tk.Tk()
+root.configure(bg="grey30")
+
+label = tk.Label(root, text="klik")
+
+def schowaj():
+  label.grid_forget()
+
+def coś():
+    label.grid(row=1, column=0, padx=10, pady=10)
+    root.after(300, schowaj)    
+
+
+root.geometry("1050x2200+0+0")
+root.resizable(False, False)
+root.attributes("-fullscreen", True)
+
+
+button = tk.Button(root, text="Kliknij mnie", command=coś, bg="grey35", fg="white")
+
+button.grid(row=0, column=0, padx=32, pady=40)
+
+btn2 = tk.Button(root, text="mnie też", command=coś, bg="grey35", fg="white")
+btn2.grid(row=0, column=1, padx=10, pady=40)
+
+wpisz = tk.Entry(root, text="wpisz", bg="grey35")
+wpisz.grid(row=1, column=1, padx=10, pady=10)
+
+
+
+folder = tk.LabelFrame(root, text="folder", bg="#5c7a89", fg="white")
+folder.grid(row=2, column=0)
+
+btnin = tk.Button(folder, text="jestem w środku", font=("arial",4))
+
+btnin.pack()
+
+folder1 = tk.LabelFrame(root, bg="grey35")
+folder1.grid(row=3, column=1)
+
+
+circle = tk.Label(folder1, text="●", bg="grey35", fg="black", font=("arial",10))
+circle.pack()
+
+root.mainloop()
+
+    
